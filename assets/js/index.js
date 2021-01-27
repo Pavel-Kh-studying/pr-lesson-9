@@ -15,6 +15,8 @@ function getSum(n) {
 console.log(getSum(2));
 
 
+
+
 // 2.1 Создать объект Student который содержит следующие свойства: 
 // имя, фамилию, пол, контактные данные.
 // 2.2 Создать объект, который содержит свойства, о факультете и кафедре.
@@ -58,7 +60,7 @@ getInfo(student1);
 const arr = [];
 
 for (let i = 0; i < 25; i++) {
-  arr[i] = Math.floor(Math.random() * 10);
+  arr.push(Math.floor(Math.random() * 10));
 }
 
 console.log(arr);
@@ -115,6 +117,7 @@ console.log(nullAmmount);
 
 
 
+
 // 4 Создать классы:
 // - Книга 
 // (автор, название, год издания, издательство)
@@ -140,12 +143,34 @@ class electronicBook extends Book {
 }
 
 const book = new Book('S King', 'It', 1990, '000 production');
-const eleBook = new electronicBook('S King', 'It', 1990, '000 production', 'pdf', 574673);
+const elecBook = new electronicBook('S King', 'It', 1990, '000 production', 'pdf', 574673);
 
 console.log(book);
-console.log(eleBook);
+console.log(elecBook);
 
 
 
 
+// 5 Требуется написать функцию, выводящую в консоль числа от 1 до n, 
+// где n — это целое число, которая функция принимает в качестве параметра, с такими условиями:
+// вывод fizzbuzz вместо чисел, кратных как 3, так и 5.
+// вывод fizz вместо чисел, кратных 3;
+// вывод buzz вместо чисел, кратных 5;
 
+
+function fizzBuzz(n) {
+  for (let i = 1; i <= n; i++) {
+    if (!(i % 3) && !(i % 5)) {
+      console.log('fizzbuzz');
+    } else
+    if (!(i % 3)) {
+      console.log('fizz');
+    } else
+    if (!(i % 5)) {
+      console.log('buzz');
+    } else
+    console.log(i);
+  }
+}
+
+console.log(fizzBuzz(15));
